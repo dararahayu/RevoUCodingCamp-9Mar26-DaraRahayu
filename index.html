@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h2 id="clock">00:00</h2>
+                <button id="theme-toggle">🌙 Toggle Theme</button>
+            </div>
+            <p id="date-display">Monday, January 1</p>
+            <h1 id="greeting-text">
+                <span id="greeting-msg">Good Morning,</span> 
+                <input type="text" id="user-name" placeholder="Your Name" autocomplete="off">
+            </h1>
+        </header>
+
+        <main class="dashboard-grid">
+            <section class="card">
+                <h3>Focus Timer (25m)</h3>
+                <div id="timer-display">25:00</div>
+                <div class="button-group">
+                    <button id="timer-start">Start</button>
+                    <button id="timer-stop">Stop</button>
+                    <button id="timer-reset">Reset</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h3>Quick Links</h3>
+                <div id="links-container" class="links-grid"></div>
+                <form id="link-form" class="input-group">
+                    <input type="text" id="link-name" placeholder="Site Name (e.g., GitHub)" required>
+                    <input type="url" id="link-url" placeholder="https://..." required>
+                    <button type="submit">Add Link</button>
+                </form>
+            </section>
+
+            <section class="card todo-card">
+                <h3>To-Do List</h3>
+                <form id="todo-form" class="input-group">
+                    <input type="text" id="todo-input" placeholder="What needs to be done?" required>
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="todo-list"></ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
